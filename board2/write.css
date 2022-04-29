@@ -1,0 +1,57 @@
+table{
+    padding-top: 50px;
+    width: auto;
+    text-align: center;
+    border: 0;
+}
+
+table th {
+    height:40; 
+    float:center; 
+    background-color:#3C3C3C;
+    font-size:25px; 
+    text-align:center; 
+    color:white; 
+    margin-top:15px; 
+    margin-bottom:15px
+}
+
+table.table2 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin: 20px 10px;
+}
+
+table.table2 tr {
+    width: 50px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+table.table2 td {
+    width: 100px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+.btn {
+    height: 30px;
+    width: 70px;
+    font-size: 15px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn:hover 
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
