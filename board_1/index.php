@@ -58,7 +58,7 @@
                     print "<tr>";
                 }
                 print "<td>$total</td>";
-                print "<td><a href='read.php?number=$number' target='_blank'>$title</a></td>";
+                print "<td><a href='read.php?number=$number'>$title</a></td>";
                 print "<td>$id</td>";
                 print "<td>$date</td>";
                 print "<td>$hit</td>";
