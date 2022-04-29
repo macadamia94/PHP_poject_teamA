@@ -21,7 +21,7 @@
     <div>
         <h1>로그인</h1>
         <form action="login_proc.php" method="post">
-            <div><input type="text" name="id" placeholder="아이디"></div>
+            <div><input type="text" name="id" placeholder="아이디" autofocus></div>
             <div><input type="password" name="pw" placeholder="패스워드"></div>
             <input type="submit" class="btn" value="로그인">
             <input type="reset" class="btn" value="초기화"> 
