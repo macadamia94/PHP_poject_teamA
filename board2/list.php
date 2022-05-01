@@ -22,7 +22,6 @@
     <div id="container">
         <header>
         <?=isset($_SESSION["login_user"]) ? "<b>" . $nm . "</b>님 환영합니다." : "" ?>
-        <a href="list.php"><button class='btn'>리스트</button></a>
         <?php if(isset($_SESSION["login_user"])) { ?>
             <a href="write.php"><button class='btn'>글쓰기</button></a>
             <a href="logout.php"><button class='btn'>로그아웃</button></a><br>
@@ -46,7 +45,7 @@
                     <?php foreach($list as $item) { 
                         $total % 2 === 0 ? print"<tr class='even'>" : print"<tr>" ?>
                         <td><?= $total ?></td>
-                        <td><?= $item["title"] ?></td>
+                        <td><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
                         <td><?= $item["nm"] ?></td>
                         <td><?= $item["created_at"] ?></td>
                         <td><?= $item["hit"] ?></td>
