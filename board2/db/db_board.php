@@ -54,7 +54,7 @@ function sel_board(&$param) {
     $i_board= $param["i_board"];
 
     $sql= 
-    "   SELECT B.title, B.ctnt, B.created_at, B.hit
+    "   SELECT B.title, B.ctnt, B.created_at, B.updated_at, B.hit
              , U.i_user, U.nm
           FROM t_board B
          INNER JOIN t_user U

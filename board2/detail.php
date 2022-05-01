@@ -32,8 +32,8 @@ $prev_board= sel_prev_board($param);
             <tr>
                 <td class="read">작성자</td>
                 <td class="read2"><?=$item["nm"]?></td>
-                <td class="read">등록일시</td>
-                <td class="read2"><?=$item["created_at"]?></td>
+                <td class="read">수정일시</td>
+                <td class="read2"><?=$item["updated_at"]?></td>
                 <td class="read">조회수</td>
                 <td class="read2_hit"><?=$item["hit"]?></td>
             </tr>
