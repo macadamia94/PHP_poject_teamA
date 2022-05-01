@@ -1,21 +1,21 @@
 <?php
-    include_once "db.php";
+    include_once "db/db_board.php";
 
-    $uid= $_POST["uid"];
+    session_start();
     $title= $_POST["title"];
     $ctnt= $_POST["ctnt"];
-    $create_at= date("Y-m-d H:i:s");
 
-    $conn= get_conn();
-    $sql= 
-    "INSERT INTO t_board
-    (uid, title, ctnt, create_at, hit)
-    VALUES
-    ('$uid', '$title', '$ctnt', '$create_at', '$hit')
-    ";
+    $login_user= $_SESSION["login_user"];
+    $i_user= $login_user["i_user"];
 
-    $result= mysqli_query($conn, $sql);
+    $param= [
+        "i_user" => $i_user,
+        "title" => $title,
+        "ctnt" => $ctnt
+    ];
 
-    if($result) {
+    $result= ins_board($param);
+
+    if($result){
         header("Location: list.php");
     }

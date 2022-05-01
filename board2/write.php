@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(isset($_SESSION["login_user"])) {
+        $login_user= $_SESSION["login_user"];
+        $nm= $login_user["nm"];
+        $uid= $login_user["uid"];
+    }else{
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,29 +19,31 @@
 </head>
 <body>
     <form action="write_proc.php" method="post">
-        <table>
+        <table id="container">
             <tr class="title">
                 <th>글쓰기</th>
             </tr>
             <tr>
-                <table class="table2">
-                    <tr>
-                        <td>작성자</td>
-                        <td><input type="text" name="nm" size=30></td>
-                    </tr>
-                    <tr>
-                        <td>제목</td>
-                        <td><input type="text" name="title" size=70></td>
-                    </tr>
-                    <tr>
-                        <td>내용</td>
-                        <td><textarea name="ctnt" cols=72 rows=10></textarea></td>
-                    </tr>
-                </table>
-                <center>
-                    <input type="submit" class="btn" value="글등록">
-                    <input type="reset" class="btn" value="초기화">
-                </center>
+                <td>
+                    <table class="table2">
+                        <tr>
+                            <td>작성자</td>
+                            <td><input type="hidden" name="uid" value="<?=$uid?>"><?=$nm?></td>
+                        </tr>
+                        <tr>
+                            <td>제목</td>
+                            <td><input type="text" name="title" size=70></td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td><textarea name="ctnt" cols=72 rows=10></textarea></td>
+                        </tr>
+                    </table>
+                    <center>
+                        <input type="submit" class="btn" value="글등록">
+                        <input type="reset" class="btn" value="초기화">
+                    </center> 
+                </td>
             </tr>
         </table>
     </form>

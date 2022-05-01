@@ -41,6 +41,14 @@
     height: 300px;
 }
 
+.read_btn {
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
 .btn {
     float: right;
     font-size: 15px;

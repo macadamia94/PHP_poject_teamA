@@ -58,7 +58,7 @@
                 <tbody>
                     <?php foreach($list as $item) { 
                         $total % 2 === 0 ? print"<tr class='even'>" : print"<tr>" ?>
-                        <td><?= $total ?></td>
+                        <td><?= $item["i_board"] ?></td>
                         <td><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
                         <td><?= $item["nm"] ?></td>
                         <td><?= $item["created_at"] ?></td>
