@@ -67,6 +67,20 @@ function sel_board(&$param) {
     return mysqli_fetch_assoc($result);
 }
 
+function sel_hit_board(&$param) {
+    $i_board= $param["i_board"];
+
+    $sql=
+    "   UPDATE t_board
+           SET hit = hit + 1
+         WHERE i_board= ${i_board}
+    ";
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
+
 function sel_next_board(&$param) {
     $i_board= $param["i_board"];
     $sql=
