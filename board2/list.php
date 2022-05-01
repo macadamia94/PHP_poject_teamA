@@ -1,12 +1,26 @@
 <?php
     include_once "db/db_board.php";
     session_start();
+    
+    $page= 1;
+    if(isset($_GET["page"])) {
+        $page= intval($_GET["page"]);
+    }
+
     $nm= "";
     if(isset($_SESSION["login_user"])) {
         $login_user= $_SESSION["login_user"];
         $nm= $login_user["nm"];
     }
-    $list= sel_board_list();
+
+    $row_count= 10;
+    $param= [
+        "row_count" => 10,
+        "start_idx" => ($page - 1) * $row_count
+    ];
+    $paging_count= sel_paging_count($param);
+
+    $list= sel_board_list($param);
     $total= mysqli_num_rows($list);
 ?>
 <!DOCTYPE html>
@@ -53,6 +67,12 @@
                 </tbody>
                 <?php $total--; } ?>
             </table>
+            <div class="paging">
+                <?php for($i=1; $i<=$paging_count; $i++) { ?>
+                    <span class="<?=$i===$page ? "pageSelected" : ""?>">
+                        <a href="list.php?page=<?=$i?>"><?=$i?></a></span>
+                <?php } ?>
+            </div>
         </main>
     </div>
 </body>
