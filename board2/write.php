@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $nm= "";
+    $uid= "";
     if(isset($_SESSION["login_user"])) {
         $login_user= $_SESSION["login_user"];
         $nm= $login_user["nm"];
@@ -32,11 +34,11 @@
                         </tr>
                         <tr>
                             <td>제목</td>
-                            <td><input type="text" name="title" size=70></td>
+                            <td><input type="text" name="title" placeholder="제목" size=70></td>
                         </tr>
                         <tr>
                             <td>내용</td>
-                            <td><textarea name="ctnt" cols=72 rows=10></textarea></td>
+                            <td><textarea name="ctnt" placeholder="내용" cols=72 rows=10></textarea></td>
                         </tr>
                     </table>
                     <center>

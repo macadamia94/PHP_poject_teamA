@@ -4,7 +4,6 @@ session_start();
 $nm= "";
 if(isset($_SESSION["login_user"])) {
     $login_user= $_SESSION["login_user"];
-    $nm= $login_user["nm"];
 }
 $i_board= $_GET["i_board"];
 $param= [
@@ -23,14 +22,6 @@ $item= sel_board($param);
 </head>
 <body>
     <div>
-    <header>
-        <?=isset($_SESSION["login_user"]) ? "<b>" . $nm . "</b>님 환영합니다." : "" ?>
-        <?php if(isset($_SESSION["login_user"])) { ?>
-            <a href="logout.php"><button class='btn'>로그아웃</button></a><br>
-        <?php } else { ?>
-            <a href="login.php"><button class='btn'>로그인</button></a><br>
-        <?php } ?>        
-    </header>
     <main>
         <table id="container">
             <tr>
@@ -52,10 +43,18 @@ $item= sel_board($param);
         <a href="list.php"><button class='list_btn'>리스트</button></a>
             <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] === $item["i_user"]) { ?>
             <a href="mod.php?i_board=<?=$i_board?>"><button class='list_btn'>수정</button></a>
-            <button class='list_btn'>삭제</button>
+            <button class='list_btn' onclick="isDel();">삭제</button>
             <?php } ?>
         </center>
     </main>
     </div>
+    <script>
+        function isDel() {
+            console.log('isDel 실행됨!!');
+            if(confirm('삭제하시겠습니까?')) {
+                location.href= "del.php?i_board=<?=$i_board?>";
+            }
+        }
+    </script>
 </body>
 </html>
