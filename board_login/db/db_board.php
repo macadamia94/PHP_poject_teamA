@@ -75,7 +75,7 @@
               FROM t_board 
              WHERE i_board > $i_board
              ORDER BY i_board 
-             LIMIT 1;
+             LIMIT 1
         ";
         $conn= get_conn();
         $result= mysqli_query($conn, $sql);
@@ -95,7 +95,7 @@
               FROM t_board
              WHERE i_board < $i_board
              ORDER BY i_board DESC
-             LIMIT 1;
+             LIMIT 1
         ";
         $conn= get_conn();
         $result= mysqli_query($conn, $sql);
