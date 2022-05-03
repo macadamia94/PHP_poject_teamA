@@ -9,6 +9,9 @@ $param= [
     "i_user" => $i_user
 ];
 $result= del_board($param);
-if($result) {
-    header("Location: list.php");
-}
+if($result) { ?>
+    <script>
+    alert("삭제되었습니다.");
+    location.href= "list.php";
+    </script>
+<?php } ?>
