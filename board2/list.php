@@ -16,7 +16,7 @@
     $row_count= 10; // 한페이지 줄수
     $max_count= 5;  // 한페이지 블럭수
     $param= [
-        "row_count" => 10,
+        "row_count" => $row_count,
         "start_idx" => ($page - 1) * $row_count                 // limit 시작위치
     ];
     $s_pageNum= intval(($page-1)/$max_count) * $max_count +1;   // 첫 페이지
@@ -27,6 +27,14 @@
     }
     $list= sel_board_list($param);
     $total= mysqli_num_rows($list);
+
+    function select_check($row_count, $count) {
+        if($row_count == $count) {
+            echo "<option value=". $count ."selected>";
+        } else {
+            echo "<option value=". $count .">";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +58,16 @@
         </header>
         <main>
             <h1>리스트</h1>
+            <div>
+                <form method="post">
+                    <select name="board_list_count" onchange="this.form.submit()">
+                        <?php select_check($row_count, 5); ?> 5개 </option>
+                        <?php select_check($row_count, 10); ?> 10개 </option>
+                        <?php select_check($row_count, 15); ?> 15개 </option>
+                        <?php select_check($row_count, 20); ?> 20개 </option>
+                    </select>
+                </form>
+            </div>
             <table>
                 <thead>
                     <tr>
