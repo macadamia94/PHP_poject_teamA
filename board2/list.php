@@ -3,6 +3,7 @@
     session_start();
     
     $page= 1;
+    $row_count_list= array(5, 10, 15, 20);  // 보여줄 행의 개수 리스트
     if(isset($_GET["page"])) {
         $page= intval($_GET["page"]);
     }
@@ -13,7 +14,12 @@
         $nm= $login_user["nm"];
     }
 
-    $row_count= 10; // 한페이지 줄수
+    // $현재 페이지에서 보여줄 행 개수 초기화 하는 곳
+    if(isset($_POST['board_list_count'])) {
+        $row_count= $_POST['board_list_count'];
+    } else {
+        $row_count= $row_count_list[0];
+    }
     $max_count= 5;  // 한페이지 블럭수
     $param= [
         "row_count" => $row_count,
@@ -30,10 +36,9 @@
 
     function select_check($row_count, $count) {
         if($row_count == $count) {
-            echo "<option value=". $count ."selected>";
-        } else {
-            echo "<option value=". $count .">";
-        }
+            return "<option value=". $count ."selected>";
+        } 
+        return "<option value=". $count .">";
     }
 ?>
 <!DOCTYPE html>
@@ -61,10 +66,12 @@
             <div>
                 <form method="post">
                     <select name="board_list_count" onchange="this.form.submit()">
-                        <?php select_check($row_count, 5); ?> 5개 </option>
-                        <?php select_check($row_count, 10); ?> 10개 </option>
-                        <?php select_check($row_count, 15); ?> 15개 </option>
-                        <?php select_check($row_count, 20); ?> 20개 </option>
+                        <?php
+                            for ($i=0; $i < count($row_count_list) ; $i++) { 
+                                // <option value="$row_count_list[$i]"> $row_count_list[$i]. "개"</option>
+                                echo select_check($row_count, $row_count_list[$i]) . $row_count_list[$i] . "개 </option>";
+                            }
+                        ?>
                     </select>
                 </form>
             </div>
