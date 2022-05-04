@@ -34,6 +34,17 @@
     $list= sel_board_list($param);
     $total= mysqli_num_rows($list);
 
+    // 검색버튼을 눌렀거나, 검색어가 존재한다면 
+    if(isset($_POST['search_input_txt']) && $_POST['search_input_txt']!="") {
+        // 파라미터 추가
+        $param += [
+            "search_select" => $_POST["search_select"], // select박스 value값
+            "search_input_txt" => $_POST["search_input_txt"] // 검색어
+        ];
+        // DB조회 전달 후 결과 list를 받아 옴
+        $list = search_board($param);
+    }
+
     function select_check($row_count, $count) {
         if($row_count == $count) {
             return "<option value=". $count ."selected>";
@@ -111,6 +122,19 @@
                 <a href="list.php?page=<?=$page+1?>">다음글</a>
                 <?php } ?>
             </div>
+            <form action="list.php" method="POST">
+                <div>
+                    <select name="search_select">
+                        <option value="search_writer">작성자</option>
+                        <option value="search_title">제목</option>
+                        <option value="search_ctnt">제목+내용</option>
+                    </select>
+                    <div>
+                        <input type="text" name="search_input_txt">
+                        <input type="submit" value="검색">
+                    </div>
+                </div>
+            </form>
         </main>
     </div>
 </body>
