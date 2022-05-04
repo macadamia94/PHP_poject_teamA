@@ -8,7 +8,7 @@
     $DD=date('d'); // 일
     $dat=$YY."-".$MM."-".$DD;
 
-    $dat="2014-05-13";
+    // $dat="2014-05-13";
     //오늘 날짜 정보를 DB에서 조회
     $sql= "SELECT * FROM count_db WHERE redate = '$dat'";
     //쿼리전송
