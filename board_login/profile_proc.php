@@ -1,0 +1,45 @@
+<?php
+    session_start();
+    define("PROFILE_PATH", "img/profile/");
+
+    $login_user= $_SESSION["login_user"];
+    
+    var_dump($_FILES);
+    if($_FILES["img"]["name"] === "") {
+        echo "이미지 없음";
+        exit;
+    }
+
+    // 파일명 함수 (UUID)
+    function gen_uuid_v4() { 
+        return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x'
+            , mt_rand(0, 0xffff)
+            , mt_rand(0, 0xffff)
+            , mt_rand(0, 0xffff)
+            , mt_rand(0, 0x0fff) | 0x4000
+            , mt_rand(0, 0x3fff) | 0x8000
+            , mt_rand(0, 0xffff)
+            , mt_rand(0, 0xffff)
+            , mt_rand(0, 0xffff) 
+        ); 
+    }
+
+    $img_name= $_FILES["img"]["name"];
+    $last_index= mb_strrpos($img_name, ".");
+    // strrpos : 대상 문자열을 뒤에서 부터 검색하여 찾고자 하는 문자열이 
+    //           몇번째 위치에 있는지를 리턴하는 함수
+    $ext= mb_substr($img_name, $last_index);
+
+    $target_filenm= gen_uuid_v4() . $ext;
+    $target_full_path= PROFILE_PATH . $login_user["i_user"];
+    if(!is_dir($target_full_path)) { //← 이 식은 폴더 없는 경우 true
+        mkdir($target_full_path, 0777, true); 
+    }
+
+    $tmp_img= $_FILES["img"]["tmp_name"];
+    $imageUpload= move_uploaded_file($tmp_img, $target_full_path . "/" . $target_filenm);
+    if($imageUpload) {
+        header("Location: profile.php");;
+    } else {
+        echo "업로드 실패";
+    }
