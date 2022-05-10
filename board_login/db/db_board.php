@@ -30,13 +30,13 @@
         return $row["cnt"];
     }
 
-    function sel_board_list($param){
+    function sel_board_list(&$param){
         $start_idx = $param["start_idx"];
         $row_count= $param["row_count"];
 
         $sql=
         "   SELECT B.i_board, B.title, B.created_at
-                 , U.nm
+                 , U.i_user, U.nm, U.profile_img
              FROM t_board B
             INNER JOIN t_user U
                ON B.i_user = U.i_user

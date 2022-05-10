@@ -32,7 +32,6 @@ function sel_user(&$param) {
     return mysqli_fetch_assoc($result);
 }
 
-// 
 function upd_profile_img(&$param) {
     $sql= 
     "   UPDATE t_user

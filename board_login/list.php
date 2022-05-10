@@ -34,12 +34,21 @@
     <div id="container">
         <header>
         <?=isset($_SESSION["login_user"]) ? "<div>". $nm . "님 환영합니다.</div>" : "" ?>
-        <div>
+        <div class="top">
             <a href="list.php">리스트</a>
             <?php if(isset($_SESSION["login_user"])){ ?>
                 <a href="write.php">글쓰기</a>
                 <a href="logout.php">로그아웃</a>
-                <a href="profile.php">프로필</a>
+                <a href="profile.php">
+                    프로필
+                    <?php 
+                        $session_img= $_SESSION["login_user"]["profile_img"];
+                        $profile_img= $session_img == null ? "basic.jpg" : $_SESSION["login_user"]["i_user"] . "/" . $session_img;
+                    ?>
+                    <div class="circular__img wh40">
+                        <img src="/board_login/img/profile/<?=$profile_img?>">
+                    </div>
+                </a>
             <?php }else{ ?>
                 <a href="login.php">로그인</a>
             <?php } ?>
@@ -58,11 +67,18 @@
                 </thead>
                 <tbody>
                     <?php //while($item= mysqli_fetch_assoc(($list))) {?>
-                    <?php foreach($list as $item) {?>
+                    <?php foreach($list as $item) {
+                         $row_profile_img= $item["profile_img"]== null ? "basic.jpg" : $item["i_user"] . "/" . $item["profile_img"];    
+                    ?>
                     <tr>
                         <td><?= $item["i_board"] ?></td>
                         <td><a href="detail.php?i_board=<?=$item["i_board"]?>"><?=$item["title"]?></a></td>
-                        <td><?= $item["nm"] ?></td>
+                        <td>
+                            <div class="circular__img wh40">
+                                <img src="/board_login/img/profile/<?=$row_profile_img?>">
+                            </div>
+                            <?= $item["nm"] ?>
+                        </td>
                         <td><?= $item["created_at"] ?></td>
                     </tr>
                 </tbody>
