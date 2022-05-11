@@ -1,11 +1,14 @@
 <?php
     include_once "../db/db_user.php";
 
-    $uid= $_POST["uid"];
-    $upw= $_POST["upw"];
+    $u_nick= $_POST["u_nick"];
+    $u_pw= $_POST["u_pw"];
+
+    echo "uid : ", $u_nick, "<br>";
+    echo "upw : ", $u_pw, "<br>";
 
     $param= [
-        "uid" => $uid
+        "u_nick" => $u_nick
     ];
 
     $result= sel_user($param);
@@ -16,7 +19,7 @@
         </script>
     <?php exit; } 
     
-    if($result["upw"]===$upw) {
+    if($result["u_pw"]===$u_pw) {
         session_start();
         $_SESSION["login_user"]= $result; 
         header("Location: ../board/index.php");

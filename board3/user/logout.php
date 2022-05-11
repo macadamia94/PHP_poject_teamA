@@ -1,4 +1,8 @@
 <?php
-session_start();
-session_destroy();
-header("Location: ../board/index.php");
+    session_start();
+    session_destroy(); 
+?>
+<script>
+    alert("로그아웃 되었습니다.");
+    location.href= "../user/login.php";
+</script>
