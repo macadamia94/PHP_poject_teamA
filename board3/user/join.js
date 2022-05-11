@@ -28,17 +28,16 @@ function change() {
 }
 
 function mail_change(){
-    if(document.join.u_email.options[document.join.u_email.selectedIndex].value == '0'){
-        document.join.u_email2.disabled = true;
-        document.join.u_email2.value = "";
+    if(document.join.u_mail.options[document.join.u_mail.selectedIndex].value == '0'){
+        document.join.u_mail2.disabled = true;
+        document.join.u_mail2.value = "";
     }
-    if(document.join.u_email.options[document.join.u_email.selectedIndex].value == '1'){
-        document.join.u_email2.disabled = false;
-        document.join.u_email2.value = "";
-        document.join.u_email2.focus();
+    if(document.join.u_mail.options[document.join.u_mail.selectedIndex].value == '1'){
+        document.join.u_mail2.disabled = false;
+        document.join.u_mail2.value = "";
+        document.join.u_mail2.focus();
     } else{
-        document.join.u_email2.disabled = true;
-        document.join.u_email.value = document.join.u_email.options[document.join.u_email.selectedIndex].value;
-        document.join.u_email2.value = document.join.u_email.options[document.join.u_email.selectedIndex].value;
+        document.join.u_mail2.disabled = false;
+        document.join.u_mail2.value = document.join.u_mail.options[document.join.u_mail.selectedIndex].value;
     }
 }
