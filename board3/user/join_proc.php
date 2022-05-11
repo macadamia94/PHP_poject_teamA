@@ -1,29 +1,25 @@
 <?php
 include_once "../db/db_user.php";
 
-$addr= $_POST["addr"];
-$uid= $_POST["decide_id"];
-$upw= $_POST["upw"];
-$upw2= $_POST["upw2"];
-$nm= $_POST["nm"];
-$tel= $_POST["tel"];
-$addr= $_POST["addr"];
-$email= $_POST["email1"]."@".$_POST["email"];
+$u_nick= $_POST["decide_nick"];
+$u_pw= $_POST["u_pw"];
+$u_pw2= $_POST["u_pw2"];
+$u_mail1= $_POST["u_mail1"];
+$u_mail2= $_POST["u_mail2"];
+
+$u_mail= $u_mail1."@".$u_mail2;
 
 $param= [
-    "uid" => $uid,
-    "upw" => $upw,
-    "nm" => $nm,
-    "tel" => $tel,
-    "addr" => $addr,
-    "email" => $email
+    "u_nick" => $u_nick,
+    "u_pw" => $u_pw,
+    "u_mail" => $u_mail
 ];
 
 $check= sel_user($param);
 $result= ins_join($param);
 
 if(!$check) {
-    if($upw !== $upw2) { ?>
+    if($u_pw !== $u_pw2) { ?>
         <script>
             alert('비밀번호가 일치하지 않습니다.'); 
             history.back();

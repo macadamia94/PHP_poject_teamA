@@ -3,12 +3,12 @@ include_once "db.php";
 
 // check.php, join_proc.php, login_proc.php
 function sel_user(&$param) {
-    $uid= $param["uid"];
+    $u_nick= $param["u_nick"];
 
     $sql=
-    "   SELECT i_user, uid, upw, nm, tel, addr, email
-        FROM t_user
-        WHERE uid = '${uid}'
+    "   SELECT u_num, u_nick, u_pw, u_mail
+        FROM user_t
+        WHERE u_nick = '${u_nick}'
     ";
 
     $conn= get_conn();
@@ -19,24 +19,24 @@ function sel_user(&$param) {
 
 // join_proc.php
 function ins_join(&$param) {
-    $nm= $param["nm"];
-    $uid= $param["uid"];
-    $upw= $param["upw"];
-    $tel= $param["tel"];
-    $addr= $param["addr"];
-    $email= $param["email"];
+    $u_nick= $param["u_nick"];
+    $u_pw= $param["u_pw"];
+    $u_mail= $param["u_mail"];
 
     $conn= get_conn();
     $sql= 
-    "   INSERT INTO t_user
-        (uid, upw, nm, tel, addr, email, created_at)
+    "   INSERT INTO user_t
+        (u_nick, u_pw, u_mail, u_date)
         VALUES 
-        ('$uid', '$upw', '$nm', '$tel', '$addr', '$email', now())
+        ('$u_nick', '$u_pw', '$u_mail', now())
     ";
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
     return $result;
 }
+
+
+
 
 // addr_proc.php
 function sel_addr(&$param) {

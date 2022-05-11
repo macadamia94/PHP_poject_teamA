@@ -12,20 +12,17 @@
         <a href="../board/index.php">← MAIN</a>
     </header>
     <fieldset>
-        <legend><h2>🌻　회원가입　🌻</h2></legend>
+        <legend><h2>🌼　회원가입　🌼</h2></legend>
         <form action="join_proc.php" method="post" name="join" autocomplete="off">
-            <div><input type="text" name="uid" id="uid" class="data" placeholder="아이디" required autofocus></div>
-            <input type="hidden" name="decide_id" id="decide_id">
+            <div><input type="text" name="u_nick" id="u_nick" class="data" placeholder="닉네임" required autofocus></div>
+            <input type="hidden" name="decide_nick" id="decide_nick">
             <div><span id="decide" style='color:red;'>ID 중복 여부를 확인해주세요.</span>
-            <input type="button" id="check_button" value="ID 중복 검사" onclick="checkid();"></div>
-            <div><input type="password" name="upw" class="data" placeholder="비밀번호" required></div>
-            <div><input type="password" name="upw2" class="data" placeholder="비밀번호 확인" required></div>
-            <div><input type="text" name="nm" class="data" placeholder="이름" required></div>
-            <div><input type="tel" name="tel" class="data" placeholder="숫자만 입력하세요" required></div>
-            <div><input type="text" name="addr" id="addr" class="data" onclick="address();" placeholder="주소를 검색해주세요" required></div>
-            <div><input type="text" name="email1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required>
-               @ <input type="text" name="email2" class="data" value = "" disabled>
-                <select name="email" class="data" onchange="email_change()">
+            <input type="button" id="check_button" value="ID 중복 검사" onclick="checknick();"></div>
+            <div><input type="password" name="u_pw" class="data" placeholder="비밀번호" required></div>
+            <div><input type="password" name="u_pw2" class="data" placeholder="비밀번호 확인" required></div>
+            <div><input type="text" name="u_mail1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required>
+               @ <input type="text" name="u_mail2" class="data" value = "" disabled>
+                <select name="u_mail" class="data" onchange="mail_change()">
                     <option value="0">선택하세요</option>
                     <option value="naver.com">naver.com</option>
                     <option value="hanmail.net">hanmail.net</option>
