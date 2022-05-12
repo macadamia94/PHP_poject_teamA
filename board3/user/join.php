@@ -21,7 +21,7 @@
             <div><input type="password" name="u_pw" class="data" placeholder="비밀번호" required></div>
             <div><input type="password" name="u_pw2" class="data" placeholder="비밀번호 확인" required></div>
             <div><input type="text" name="u_mail1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required>
-               @ <input type="text" name="u_mail2" class="data" value = "" disabled>
+               @ <input type="text" name="u_mail2" class="data" value="" disabled>
                 <select name="u_mail" class="data" onchange="mail_change()">
                     <option value="0">선택하세요</option>
                     <option value="naver.com">naver.com</option>
