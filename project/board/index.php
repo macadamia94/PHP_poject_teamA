@@ -38,7 +38,7 @@ $list= sel_board_list();
         </tr>
     </table>
     <center>
-        <button class="no" onclick="location.href='write.php'">글쓰기</button>        
+        <button class="no" onclick="location.href='../admin/upload.php'">Upload</button>        
     </center>
 </body>
 </html>
