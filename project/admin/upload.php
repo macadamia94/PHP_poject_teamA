@@ -12,5 +12,8 @@
         <div><label>img : <input type="file" name="pic_img" accept="img/*"></label></div>
         <div><input type="submit" value="upload"></div>
     </form>
+    <div>
+        <br><a href="../board/index.php">←메인</a>        
+    </div>
 </body>
 </html>
