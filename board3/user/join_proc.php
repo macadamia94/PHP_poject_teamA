@@ -18,7 +18,7 @@ $param= [
 $check= sel_user($param);
 $result= ins_join($param);
 
-if(!$check) {
+if(!$check) { 
     if($u_pw !== $u_pw2) { ?>
         <script>
             alert('비밀번호가 일치하지 않습니다.'); 
@@ -38,9 +38,4 @@ if(!$check) {
             </script>
         <?php }
     }
-} else { ?>
-    <script>
-        alert('아이디가 중복됩니다.'); 
-        history.back();
-    </script>
-<?php } ?>
+} ?>

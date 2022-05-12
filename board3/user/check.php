@@ -23,10 +23,10 @@ $result= sel_user($param);
     <div class="check">
     <?php if(!$result) { ?>
         <div class="check_nm"><span style="color: blue"><b style="color: red;"><?= $u_nick ?></b></span> 는 사용 가능한 아이디 입니다.</div>
-    <div><input type="button" class="check_btn" value="이 ID 사용" onclick="opener.location.href ='javascript: decide()';  window.close();"></div>
+    <div><input type="button" class="check_btn" value="이 nick 사용" onclick="opener.location.href ='javascript: decide()';  window.close();"></div>
     <?php } else { ?>
         <div class="check_nm"><span style="color: red"><b style="color: red;"><?= $u_nick ?></b></span> 는 중복된 아이디 입니다.</div>
-        <div><input type="button" class="check_btn" value="다른 ID 사용" onclick="opener.location.href ='javascript: change()'; window.close()"></div>
+        <div><input type="button" class="check_btn" value="다른 nick 사용" onclick="opener.location.href ='javascript: change()'; window.close()"></div>
     <?php } ?>            
     </div>
 </body>

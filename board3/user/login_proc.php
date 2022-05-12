@@ -4,8 +4,8 @@
     $u_nick= $_POST["u_nick"];
     $u_pw= $_POST["u_pw"];
 
-    echo "uid : ", $u_nick, "<br>";
-    echo "upw : ", $u_pw, "<br>";
+    // echo "u_nick : ", $u_nick, "<br>";
+    // echo "u_pw : ", $u_pw, "<br>";
 
     $param= [
         "u_nick" => $u_nick
@@ -14,7 +14,7 @@
     $result= sel_user($param);
     if(!$result) { ?>
         <script>
-            alert ("일치하는 아이디가 없습니다.") ;
+            alert ("닉네임을 확인해주세요.") ;
             history.back();
         </script>
     <?php exit; } 
@@ -25,7 +25,7 @@
         header("Location: ../board/index.php");
     } else { ?>
         <script>
-            alert("비밀번호가 일치하지 않습니다.");
+            alert("비밀번호를 확인해주세요.");
             history.back();
         </script>
     <?php } ?>
