@@ -61,6 +61,6 @@ if($result) {
     echo
     "<script>
         alert('게시글이 작성되었습니다.');
-        location.replace('index.php');
+        location.replace('../board/index.php');
     </script> ";
 }
