@@ -78,6 +78,9 @@ form {
 small a {
     color: #00491E;
     line-height: 33px;
+    display: grid; 
+    justify-content: center;
+    align-items: center;
 }
 
 /* check.php */

@@ -13,10 +13,10 @@
             <a href="../board/index.php">← MAIN</a>        
         </header>
         <fieldset>
-            <legend><h2>🌻 로그인 🌻</h2></legend>
+            <legend><h2>🌼 로그인 🌼</h2></legend>
             <form action="login_proc.php" method="post" autocomplete="off">
-                <div><input type="text" name="uid" class="box" placeholder="아이디" autofocus></div>
-                <div><input type="password" name="upw" class="box" placeholder="비밀번호"></div>
+                <div><input type="text" name="u_nick" class="box" placeholder="닉네임" autofocus></div>
+                <div><input type="password" name="u_pw" class="box" placeholder="비밀번호"></div>
                 <div><input type="submit" class="button" value="로그인"></div>
             </form>        
         </fieldset>        

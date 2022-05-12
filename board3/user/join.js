@@ -28,7 +28,8 @@ function change() {
 }
 
 function mail_change(){
-    if(document.join.u_mail2.options[document.join.u_mail.selectedIndex].value == '0'){
+
+    if(document.join.u_mail.options[document.join.u_mail.selectedIndex].value == '0'){
         document.join.u_mail2.disabled = true;
         document.join.u_mail2.value = "";
     }
@@ -36,8 +37,8 @@ function mail_change(){
         document.join.u_mail2.disabled = false;
         document.join.u_mail2.value = "";
         document.join.u_mail2.focus();
-    } else {
-        document.join.u_mail2.disabled = true;
+    } else{
+        document.join.u_mail2.disabled = false;
         document.join.u_mail2.value = document.join.u_mail.options[document.join.u_mail.selectedIndex].value;
     }
 }
