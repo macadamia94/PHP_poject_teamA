@@ -18,7 +18,7 @@
             <input type="hidden" name="decide_nick" id="decide_nick">
             <div><span id="decide" style='color:red;'>닉네임 중복 여부를 확인해주세요.</span>
             <input type="button" id="check_button" value="중복 검사" onclick="checknick();"></div>
-            <div><input type="password" name="u_pw" id="u_pw" class="data" placeholder="비밀번호" required></div>
+            <div><input type="password" name="u_pw" id="u_pw" class="data" placeholder="비밀번호" required> (영문자+숫자 6~12자리 사용) </div>
             <div><input type="password" name="u_pw2" id="u_pw2" class="data" placeholder="비밀번호 확인" required></div>
             <div><input type="text" name="u_mail1" id="u_mail1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required>
                @ <input type="text" name="u_mail2" class="data" value="" disabled>
@@ -32,8 +32,8 @@
                     <option value="1">직접입력</option>
                 </select> 
             </div>
-            <div><input type="submit" class="join_button" id="join_button" onclick="pw_check();" value="가입하기" disabled></div>
-        </form>        
+            <div><input type="button" class="join_button" id="join_button" onclick="pw_check();" value="가입하기" disabled></div>
+        </form>
     </fieldset>
     <small><a href="login.php">이미 회원이신가요?</a></small>
     <script src="join.js"></script>

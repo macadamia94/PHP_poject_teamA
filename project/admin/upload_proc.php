@@ -53,6 +53,8 @@ if($imgUpload) {
 $param+= [
     "s_id" => $s_id 
 ];
+
+// db_board.php 에 ins_img함수 있음
 $result= ins_img($param);
 
 if($result) {

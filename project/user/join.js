@@ -50,28 +50,28 @@ function pw_check() {
         alert("비밀번호를 입력해주세요.");
         u_pw.focus();
         return false;
-        };
+        }
     
     var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,12}$/;
 
     if (!pwdCheck.test(u_pw.value)) {
-    alert("비밀번호는 영문자+숫자 조합으로 6~12자리 사용해야 합니다.");
-    u_pw.focus();
-    return false;
-    };
+        alert("비밀번호는 영문자+숫자 조합으로 6~12자리 사용해야 합니다.");
+        u_pw.focus();
+        return false;
+        }
 
     if (u_pw2.value !== u_pw.value) {
         alert("비밀번호가 일치하지 않습니다.");
         u_pw2.focus();
         return false;
-        };
-        
+        }
+
     if (u_mail1.value == "") {
         alert("이메일 주소를 입력해주세요.");
         email_id.focus();
         return false;
         }
-        
+
     //입력 값 전송
-    document.join_form.submit(); //유효성 검사의 포인트   
+    document.join.submit();
 }
