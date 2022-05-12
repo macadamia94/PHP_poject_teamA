@@ -11,10 +11,10 @@
     <aside id="left">
         <h4>LOCATION</h4>
         <ul>
-            <li><a href="gallery.php?loc_id=${loc_id}">서울</a></li>
-            <li><a href="gallery.php">대구</a></li>
-            <li><a href="gallery.php">부산</a></li>
-            <li><a href="gallery.php">제주</a></li>
+            <li><a href="gallery.php?loc_id=<?=$loc_id?>">서울</a></li>
+            <li><a href="gallery?loc_id=<?=$loc_id?>.php">대구</a></li>
+            <li><a href="gallery?loc_id=<?=$loc_id?>.php">부산</a></li>
+            <li><a href="gallery?loc_id=<?=$loc_id?>.php">제주</a></li>
         </ul>
     </aside>
     <footer></footer>
