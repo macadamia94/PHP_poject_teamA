@@ -2,7 +2,7 @@
 
 body {
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     flex-direction: column;
  }
 
@@ -25,10 +25,15 @@ body {
 }
 
 .aside {
-    width: 300px;
     /* background-color: #c8efd4; */
     border-right: 1px solid #ccc;
+    width: 200px;
+}
+
+.aside .left {
+    position: unset;
     float: left;
+    margin-left: 15px;
 }
 
 .aside .left h4 { 

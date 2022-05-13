@@ -20,9 +20,9 @@
             <td class="gallery_nm">서울 미술관 3</td>
         </tr>
         <tr>
-            <td class="gallery_intro"><img src="../img/gallery_intro.PNG"></td>
-            <td class="gallery_intro"><img src="../img/gallery_intro.PNG"></td>
-            <td class="gallery_intro"><img src="../img/gallery_intro.PNG"></td>
+            <td class="gallery_intro"><img src="../img/그라운드시소성수(서울).PNG"></td>
+            <td class="gallery_intro"><img src="../img/일민미술관(서울).PNG"></td>
+            <td class="gallery_intro"><img src="../img/피크닉(서울).PNG"></td>
         </tr>
     </table>
 </body>
