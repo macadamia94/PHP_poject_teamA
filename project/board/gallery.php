@@ -10,7 +10,7 @@
 <body>
 <div class="wrap">
         <div class="header">
-            <header><h1>header</h1></header>
+            <?= include_once "header.php" ?>
         </div>
         <div class="container">
             <div class="aside">
