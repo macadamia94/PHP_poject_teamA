@@ -1,0 +1,45 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* html {
+    width: 1000px;
+    height: 700px;
+} */
+
+.gallery {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.gallery tr {
+    padding: 0px 30px;
+}
+
+.gallery tr td {
+    /* border: 1px solid #00491E; */
+    width: 363px;
+    padding: 0px 85px;
+}
+
+.gallery_pic {
+    height: 200px;
+    text-align: center;
+}
+
+.gallery_nm {
+    height: 45px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    color: #00491E;
+}
+
+.gallery_intro {
+    height: 445px;
+    text-align: center;
+}
