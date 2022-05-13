@@ -9,9 +9,7 @@
 </head>
 <body>
 <div class="wrap">
-        <div class="header">
-            <?= include_once "header_1.php" ?>
-        </div>
+        <?php include_once "header_1.php" ?>
         <div class="container">
             <div class="aside">
                 <aside class="left">
@@ -32,9 +30,7 @@
                 </section>
             </div>
         </div>
-        <div class="footer">
-            <?= include_once "footer.php" ?> 
-        </div>
+        <?php include_once "footer.php" ?> 
     </div>
 </body>
 </html>
