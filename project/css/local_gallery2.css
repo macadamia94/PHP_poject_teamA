@@ -1,5 +1,5 @@
 * {
-    margin-top: 32px;
+    margin: 0;
     padding: 0; 
     box-sizing: border-box; 
 }
@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 45px;
 }
 
 .gallery tr {
@@ -16,29 +17,27 @@
 
 .gallery tr td {
     /* border: 1px solid #00491E; */
-    width: 363px;
+    padding-right: 100px; 
 }
 
 .gallery_pic {
-    /* height: 420px; */
     text-align: center;
 }
 
-.gallery_nm {
+.gallery_nm2 {
     height: 45px;
-    text-align: center;
     font-size: larger;
     font-weight: bolder;
     color: #00491E;
+    text-decoration: underline;
+    padding-top: 10px;
 }
 
 .gallery_intro {
-    /* height: 225px; */
-    text-align: center;
+    padding-bottom: 20px;
 }
 
 a {
-    text-decoration: none;
     color: #00491E;
 }
 

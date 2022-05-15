@@ -38,7 +38,7 @@ body {
 
 .aside .left h4 { 
     text-align: center; 
-    margin: 15px 8px; 
+    margin: 25px 8px 10px; 
     color: #00491E;
 }
 
@@ -66,8 +66,8 @@ body {
     color: #00491E;
 }
 
-.aside .left ul a:hover {
-    color: green;
+.aside .left ul a:active {
+    color: #008000;
     cursor: pointer; 
     text-decoration: underline;   
 }

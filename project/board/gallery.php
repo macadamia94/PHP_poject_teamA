@@ -19,6 +19,10 @@
                         <li><a target="iframe1" href="d_gallery.php">대구</a></li>
                         <li><a target="iframe1" href="b_gallery.php">부산</a></li>
                         <li><a target="iframe1" href="j_gallery.php">제주</a></li>
+                        <li><a target="iframe1" href="s_gallery2.php">서울2</a></li>
+                        <li><a target="iframe1" href="d_gallery2.php">대구2</a></li>
+                        <li><a target="iframe1" href="b_gallery2.php">부산2</a></li>
+                        <li><a target="iframe1" href="j_gallery2.php">제주2</a></li>
                     </ul>
                 </aside>
             </div>
