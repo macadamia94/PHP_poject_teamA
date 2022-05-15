@@ -13,7 +13,7 @@
 <body>
     <table class="gallery">
         <tr>
-            <td class="gallery_pic"><a href="#"><img src="../img/img그라운드시소성수(서울).PNG"></a></td>
+            <td class="gallery_pic"><a href="main.php"><img src="../img/img그라운드시소성수(서울).PNG"></a></td>
             <td class="gallery_pic"><a href="#"><img src="../img/img일민미술관(서울).PNG"></a></td>
             <td class="gallery_pic"><a href="#"><img src="../img/img피크닉(서울).png"></a></td>
         </tr>

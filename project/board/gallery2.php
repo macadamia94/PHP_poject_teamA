@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="wrap">
-        <?php include_once "header_1.php" ?>
+    <?php include_once "header_1.php" ?>
         <div class="container">
             <div class="aside">
                 <aside class="left">
@@ -29,12 +29,12 @@
             <div class="contents">
                 <section id="main">
                     <article>
-                        <iframe name="iframe1" src="s_gallery.php" frameborder="0"></iframe>
+                        <iframe name="iframe1" src="d_gallery.php" frameborder="0"></iframe>
                     </article>
                 </section>
             </div>
         </div>
-        <?php include_once "footer.php" ?> 
-    </div>
+    <?php include_once "footer.php" ?> 
+</div>
 </body>
 </html>

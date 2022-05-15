@@ -29,7 +29,7 @@
             <div class="contents">
                 <section id="main">
                     <article>
-                        <iframe name="iframe1" src="s_gallery.php" frameborder="0"></iframe>
+                        <iframe name="iframe1" src="j_gallery.php" frameborder="0"></iframe>
                     </article>
                 </section>
             </div>

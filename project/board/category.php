@@ -18,10 +18,10 @@
     <div class="menu" style="width: 300px;">
         <div>
             <ul>
-                <li><a href='#'>서울</a></li>
-                <li><a href='#'>대구</a></li>
-                <li><a href='#'>부산</a></li>
-                <li><a href='#'>제주</a></li>
+                <li><a href='http://localhost/project/board/gallery.php'>서울</a></li>
+                <li><a href='http://localhost/project/board/gallery2.php'>대구</a></li>
+                <li><a href='http://localhost/project/board/gallery3.php'>부산</a></li>
+                <li><a href='http://localhost/project/board/gallery4.php'>제주</a></li>
                 <li><a href='#'>게시판</a></li>
             </ul>
         </div>
