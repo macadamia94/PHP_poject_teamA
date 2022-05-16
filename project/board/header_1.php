@@ -6,7 +6,7 @@
         <?php include('category.php'); ?>
         <div class="mid">우리동네미술관</div>
         <!-- 가운데 이미지 삽입-->
-        <div class="right"><a href="login.php">로그인</a> | <a href="join.php">회원가입</a></div>
+        <div class="right"><a href="../user/login.php">로그인</a> | <a href="../user/join.php">회원가입</a></div>
         <!--햄버거 아이콘 로그인 회원가입은 헤더안에 넣기 -->
     </header>
 </div>

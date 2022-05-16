@@ -35,3 +35,23 @@ function ins_img(&$param) {
    mysqli_close($conn);
    return $result;
 }
+
+// gallery.php
+function upd_img(&$param) {
+    $gal_nm= $param["gal_nm"];
+    $gal_id= $param["gal_id"];
+    $pic_id= $param["pic_id"];
+
+    $sql=
+    "   UPDATE galley_t
+           SET gal_nm = '$gal_nm'
+             , gal_intro = (SELECT pic_img FROM picture_t WHERE pic_id ='{$pic_id}')
+             , gal_img = (SELECT pic_img FROM picture_t WHERE pic_id ='{$pic_id}')
+         WHERE gal_id= '{$gal_id}';
+    ";
+
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
