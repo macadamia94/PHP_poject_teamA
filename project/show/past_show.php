@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <?php include('../main/header_1.php'); ?>
+    <?php include('../board/header_1.php'); ?>
     <div id="container">
         <div class="show_nm">
             <div><?= $s_rs['gal_nm'] ?></div>
@@ -51,7 +51,7 @@
             <?php } ?>
         </section>
     </div>
-    <?php include('../main/footer.php'); ?>
+    <?php include('../board/footer.php'); ?>
 </body>
 
 </html>

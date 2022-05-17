@@ -1,5 +1,5 @@
 <?php
-include_once "db.php";
+include_once "../db/db.php";
 
 // index.php (paging)
 function sel_paging_count(&$param) {

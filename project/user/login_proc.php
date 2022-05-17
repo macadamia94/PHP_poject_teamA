@@ -22,7 +22,7 @@
     if($result["u_pw"]===$u_pw) {
         session_start();
         $_SESSION["login_user"]= $result; 
-        header("Location: ../board/index.php");
+        header("Location: ../board/main.php");
     } else { ?>
         <script>
             alert("비밀번호를 확인해주세요.");
