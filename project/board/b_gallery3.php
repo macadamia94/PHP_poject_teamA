@@ -1,12 +1,3 @@
-<?php
-    include_once "../db/db_board.php";
-
-    session_start();
-    $login_user= $_SESSION["login_user"];
-    $u_nick= $login_user["u_nick"];
-
-    
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
