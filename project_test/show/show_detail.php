@@ -52,8 +52,6 @@
         <?php if($login_user['u_id'] == 1) { ?>
                 <center>
                     <button class="no" onclick="location.href='../admin/upload.php?s_id=<?= $s_id ?>'">Upload</button>        
-                </center>
-                <center>
                     <button class="no" onclick="location.href='../admin/text.php?s_id=<?= $s_id ?>'">글쓰기</button>        
                 </center>
             <?php } ?>

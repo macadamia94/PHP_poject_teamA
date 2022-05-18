@@ -10,6 +10,8 @@
     ];
 
     $rs = ins_ctnt($param);
-    if($rs) {
-        echo "성공";
-    }
+    if($rs) { ?>
+        <script>
+            history.go(-2);
+        </script>
+    <?php } ?>

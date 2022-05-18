@@ -33,6 +33,7 @@ table {
 
 th {
     height: 50px;
+    width: 100px;
     text-align: center;
 }
 
@@ -51,4 +52,24 @@ th, td {
     margin: auto;
     padding-top: 10px;
     width: 80%;
+}
+
+.no {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #00491E;
+    height: 30px;
+    width: 65px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #00491E;
+    border-radius: 11px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.no:hover 
+{
+    color: green;
+    cursor: pointer;
 }

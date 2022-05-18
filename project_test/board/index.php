@@ -32,7 +32,6 @@ if(isset($_POST['search_input_txt']) && $_POST['search_input_txt'] !="") {
 
     $list = search_board($param);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -50,15 +49,7 @@ if(isset($_POST['search_input_txt']) && $_POST['search_input_txt'] !="") {
     <div id="container">
         
         <header>
-            <div>
-                <?php if(isset($_SESSION["login_user"])) { ?>
-                    <div><a class="user" href="../board/write.php">글쓰기</a></div>
-                    <div><a class="user" href="../user/logout.php">로그아웃</a> </div>
-                <?php } else { ?>
-                    <div> <a class="user" href="../user/login.php">로그인</a> </div>
-                    <div> <a class="user" href="../user/join.php">회원가입</a> </div>
-                <?php } ?>
-            </div>
+
         </header>
         <main>
             <div class="top"><h2>게시판</h2></div>
@@ -74,7 +65,7 @@ if(isset($_POST['search_input_txt']) && $_POST['search_input_txt'] !="") {
                 </thead>
                 <tbody>
                     <?php foreach($list as $item) { ?>
-                        <tr>
+                        <tr class="ctnt">
                             <td><?=$item["b_id"]?></td>
                             <td><a href="detail.php?b_id=<?=$item["b_id"]?>"><?=$item["b_title"]?></a></td>
                             <td><?=$item["u_nick"]?></td>
@@ -94,7 +85,7 @@ if(isset($_POST['search_input_txt']) && $_POST['search_input_txt'] !="") {
         </main>
         <form action="index.php" method="post">
             <div>
-            <select name="search_select">
+                <select name="search_select">
                     <option value="search_writer">NAME</option>
                     <option value="search_title">TITLE</option>
                     <option value="search_ctnt">TITLE + CONTENT</option>
@@ -105,11 +96,11 @@ if(isset($_POST['search_input_txt']) && $_POST['search_input_txt'] !="") {
                 </div>
             </div>
         </form>
-            <?php if($login_user['u_id'] == 1) { ?>
+        <?php if (isset($_SESSION['login_user'])) { ?>
                 <center>
-                    <button class="no" onclick="location.href='../admin/upload.php'">Upload</button>        
+                    <button class="no" onclick="location.href='../board/write.php'">글쓰기</button>        
                 </center>
-            <?php } ?>
+        <?php } ?>
     </div>
     <?php include_once "../main/footer.php" ?>
 </body>

@@ -6,9 +6,9 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     
-}
+} */
 
 .login {
     padding-bottom: 15px;
@@ -44,6 +44,7 @@ body {
 {
     color: green;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .top {
@@ -67,7 +68,19 @@ th, td {
     border-bottom: 1px solid #74b72e;
 }
 
+.ctnt > td > a {
+    color: #00491E;
+}
+
+.ctnt > td > a:hover {
+    color: #008000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
 .no {
+    margin: 10px; 
     font-size: 15px;
     font-weight: bolder;
     color: #00491E;
@@ -77,7 +90,6 @@ th, td {
     background-color: white;
     border: 2px solid #00491E;
     border-radius: 11px;
-    margin-right: 10px;
 }
 
 .no:hover 
@@ -85,3 +97,11 @@ th, td {
     color: green;
     cursor: pointer;
 }
+
+.paging > span > a { color: #00491E }
+
+.pageSelected {
+    font-weight: bold;
+    text-align: center;
+}
+.pageSelected > a { color: red; }

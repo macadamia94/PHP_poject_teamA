@@ -17,7 +17,7 @@ function sel_paging_count(&$param) {
 // index.php
 function sel_board_list() {
     $sql=
-    "   SELECT B.b_id, B.b_title, B.b_ctnt, B.b_date
+    "   SELECT B.b_id, B.b_title, B.b_ctnt, B.b_date, B.b_count
              , U.u_nick
           FROM board_t B
          INNER JOIN user_t U
