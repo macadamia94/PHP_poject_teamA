@@ -22,6 +22,7 @@ $next_board = sel_next_board($param);
 $prev_board = sel_prev_board($param);
 $avg_rv = sel_reply2($param);
 
+$i_re = 0;
 if ($item = mysqli_fetch_assoc($reply_rs)) {
   $i_re = $item['i_re'];
 }
